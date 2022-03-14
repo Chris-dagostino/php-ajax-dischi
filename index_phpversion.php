@@ -16,11 +16,14 @@
     <?php
                             
         foreach ($database as $data){
-            echo '<h1>'. $data["title"]  . '</h1>' . '<br>';
-            echo '<li>'. $data["author"]  . '</li> ' . '<br>'; 
-            echo '<li>'. $data["year"]  . '</li> ' . '<br>';
-            echo '<li>'. $data["poster"]  . '</li> ' . '<br>';
-            echo '<li>'. $data["genre"]  . '</li> ' . '<br>';
+
+            $url = $data["poster"];
+
+            echo '<h1>'. $data["title"]  . '</h1>' ;
+            echo '<p>'. $data["author"]  . '</p> ' ; 
+            echo '<p>'. $data["year"]  . '</p> ' ;
+            echo "<img src=$url>" . '</img> ' ;
+            echo '<p>'. $data["genre"]  . '</p> ' ;
         }
 
     ?>
